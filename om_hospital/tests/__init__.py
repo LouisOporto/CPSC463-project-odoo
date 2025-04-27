@@ -1,0 +1,1 @@
+from . import test_bar, test_foo
