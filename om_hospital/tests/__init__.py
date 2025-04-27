@@ -1,1 +1,1 @@
-from . import test_bar, test_foo
+from . import test_hospital_appointment, test_hospital_patient, test_hospital_doctor
