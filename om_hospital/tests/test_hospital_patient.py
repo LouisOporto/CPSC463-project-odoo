@@ -1,5 +1,7 @@
 from odoo.tests.common import TransactionCase
+from odoo.tests import tagged
 
+# @tagged("-at_install", "post_install")
 class TestHospitalPatient(TransactionCase):
 
     def setUp(self, *args, **kwargs):
