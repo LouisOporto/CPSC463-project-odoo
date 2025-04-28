@@ -1,87 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-04-28T16:38:01.622490" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-04-28T16:41:34.708437" rpa="false" schemaversion="5">
 <suite id="s1" name="odooTesting" source="/opt/odoo15/custom-addons/odooTesting.robot">
 <test id="s1-t1" name="My login test case" line="10">
 <kw name="I want to open odoo login page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:38:01.946432" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-28T16:41:35.072480" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T16:38:01.946227" elapsed="0.775361"/>
+<status status="PASS" start="2025-04-28T16:41:35.072258" elapsed="0.889145"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:38:02.735199" level="INFO">Page title is 'Login | My Website'.</msg>
+<msg time="2025-04-28T16:41:35.974846" level="INFO">Page title is 'Login | My Website'.</msg>
 <arg>Login | My Website</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-04-28T16:38:02.721900" elapsed="0.013394"/>
+<status status="PASS" start="2025-04-28T16:41:35.961853" elapsed="0.013146"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:38:01.945715" elapsed="0.789674"/>
+<status status="PASS" start="2025-04-28T16:41:35.071712" elapsed="0.903493"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:41:40.976863" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="FAIL" start="2025-04-28T16:38:02.735568" elapsed="3.483383">Execution terminated by signal</status>
+<status status="PASS" start="2025-04-28T16:41:35.975701" elapsed="5.001465"/>
 </kw>
 <kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:41:40.979392" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T16:41:40.978700" elapsed="0.137333"/>
+</kw>
 <arg>louisoporto042@csu.fullerton.edu</arg>
-<status status="NOT RUN" start="2025-04-28T16:38:06.219814" elapsed="0.000196"/>
+<status status="PASS" start="2025-04-28T16:41:40.977947" elapsed="0.138245"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:41:46.116997" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-28T16:38:06.220527" elapsed="0.000133"/>
+<status status="PASS" start="2025-04-28T16:41:41.116488" elapsed="5.000721"/>
 </kw>
 <kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:41:46.118646" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T16:41:46.118243" elapsed="0.103507"/>
+</kw>
 <arg>odoo15</arg>
-<status status="NOT RUN" start="2025-04-28T16:38:06.220952" elapsed="0.000051"/>
+<status status="PASS" start="2025-04-28T16:41:46.117718" elapsed="0.104142"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:41:51.222901" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-28T16:38:06.221193" elapsed="0.000040"/>
+<status status="PASS" start="2025-04-28T16:41:46.222050" elapsed="5.001149"/>
 </kw>
 <kw name="Submit my credentials">
-<status status="NOT RUN" start="2025-04-28T16:38:06.221456" elapsed="0.000093"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:41:51.225272" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T16:41:51.224815" elapsed="0.942028"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:41:51.224005" elapsed="0.943105"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:41:57.168298" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-28T16:38:06.221750" elapsed="0.000043"/>
+<status status="PASS" start="2025-04-28T16:41:52.167510" elapsed="5.001043"/>
 </kw>
 <kw name="I should see this page">
-<status status="NOT RUN" start="2025-04-28T16:38:06.221974" elapsed="0.000046"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:41:57.181354" level="INFO">Page title is 'Odoo - Discuss'.</msg>
+<arg>Odoo - Discuss</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-28T16:41:57.169828" elapsed="0.011652"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:41:57.169201" elapsed="0.012508"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:42:02.182668" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-28T16:38:06.222204" elapsed="0.000027"/>
+<status status="PASS" start="2025-04-28T16:41:57.182219" elapsed="5.000584"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<msg time="2025-04-28T16:38:06.223735" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf69ca0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
-<msg time="2025-04-28T16:38:06.224395" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6a2a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
-<msg time="2025-04-28T16:38:06.224907" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6b320&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T16:38:06.222630" elapsed="0.002937"/>
+<status status="PASS" start="2025-04-28T16:42:02.183282" elapsed="0.087424"/>
 </kw>
-<status status="FAIL" start="2025-04-28T16:38:01.945199" elapsed="4.280550">Execution terminated by signal</status>
+<status status="PASS" start="2025-04-28T16:41:35.071105" elapsed="27.199743"/>
+</test>
+<test id="s1-t2" name="Positive test case of om_hospital" line="23">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:42:03.271972" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-28T16:42:02.271410" elapsed="1.000764"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:42:02.271122" elapsed="1.001461"/>
+</test>
+<test id="s1-t3" name="Negative test case of om_hospital" line="25">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:42:04.274090" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-28T16:42:03.273467" elapsed="1.000838"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:42:03.272959" elapsed="1.001744"/>
+</test>
+<test id="s1-t4" name="test case 4" line="27">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:42:05.275867" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-28T16:42:04.275380" elapsed="1.000675"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:42:04.275075" elapsed="1.001355"/>
+</test>
+<test id="s1-t5" name="test case 5" line="29">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-28T16:42:06.277966" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-28T16:42:05.277290" elapsed="1.000863"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:42:05.276807" elapsed="1.001702"/>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="FAIL" start="2025-04-28T16:38:01.623102" elapsed="4.603371"/>
+<status status="PASS" start="2025-04-28T16:41:34.709076" elapsed="31.570032"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="odooTesting" id="s1" pass="0" fail="1" skip="0">odooTesting</stat>
+<stat name="odooTesting" id="s1" pass="5" fail="0" skip="0">odooTesting</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-28T16:38:06.223735" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf69ca0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
-<msg time="2025-04-28T16:38:06.224395" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6a2a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
-<msg time="2025-04-28T16:38:06.224907" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6b320&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
 </errors>
 </robot>

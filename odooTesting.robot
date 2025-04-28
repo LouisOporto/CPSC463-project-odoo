@@ -20,6 +20,15 @@ My login test case
     Sleep    5s   
     [Teardown]    Close Browser
 
+Positive test case of om_hospital
+    Sleep   1s
+Negative test case of om_hospital
+    Sleep   1s
+test case 4
+    Sleep   1s
+test case 5
+    Sleep   1s
+
 *** Keywords ***
 I want to open odoo login page
     Open Browser    ${LOGIN URL}    ${BROWSER}
