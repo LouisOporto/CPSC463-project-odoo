@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-04-28T16:38:01.622490" rpa="false" schemaversion="5">
+<suite id="s1" name="odooTesting" source="/opt/odoo15/custom-addons/odooTesting.robot">
+<test id="s1-t1" name="My login test case" line="10">
+<kw name="I want to open odoo login page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:38:01.946432" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-28T16:38:01.946227" elapsed="0.775361"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-28T16:38:02.735199" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-28T16:38:02.721900" elapsed="0.013394"/>
+</kw>
+<status status="PASS" start="2025-04-28T16:38:01.945715" elapsed="0.789674"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="FAIL" start="2025-04-28T16:38:02.735568" elapsed="3.483383">Execution terminated by signal</status>
+</kw>
+<kw name="Input my username">
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="NOT RUN" start="2025-04-28T16:38:06.219814" elapsed="0.000196"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-28T16:38:06.220527" elapsed="0.000133"/>
+</kw>
+<kw name="Input my password">
+<arg>odoo15</arg>
+<status status="NOT RUN" start="2025-04-28T16:38:06.220952" elapsed="0.000051"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-28T16:38:06.221193" elapsed="0.000040"/>
+</kw>
+<kw name="Submit my credentials">
+<status status="NOT RUN" start="2025-04-28T16:38:06.221456" elapsed="0.000093"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-28T16:38:06.221750" elapsed="0.000043"/>
+</kw>
+<kw name="I should see this page">
+<status status="NOT RUN" start="2025-04-28T16:38:06.221974" elapsed="0.000046"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-28T16:38:06.222204" elapsed="0.000027"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2025-04-28T16:38:06.223735" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf69ca0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+<msg time="2025-04-28T16:38:06.224395" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6a2a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+<msg time="2025-04-28T16:38:06.224907" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6b320&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-28T16:38:06.222630" elapsed="0.002937"/>
+</kw>
+<status status="FAIL" start="2025-04-28T16:38:01.945199" elapsed="4.280550">Execution terminated by signal</status>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="FAIL" start="2025-04-28T16:38:01.623102" elapsed="4.603371"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="odooTesting" id="s1" pass="0" fail="1" skip="0">odooTesting</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-28T16:38:06.223735" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf69ca0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+<msg time="2025-04-28T16:38:06.224395" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6a2a0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+<msg time="2025-04-28T16:38:06.224907" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7f732bf6b320&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/aa4af65367de0e88c06a141fee341b3d</msg>
+</errors>
+</robot>
