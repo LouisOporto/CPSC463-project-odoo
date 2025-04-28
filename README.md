@@ -1,7 +1,7 @@
 ## GIT REPO ##
 Initiated inside the custom addons folder of odoo15.
 
-Current Test Cases
+# Python Unit Testing 
 # Hospital Appointmnet
 - 
 # Hospital Patient
@@ -12,8 +12,12 @@ Current Test Cases
 # Hospital Doctor
 -
 
+
+## Selenium Testing
+
 Contents:
 > /om_hospital
 > > /tests
 > >
 > > etc..
+> odooTesting.robot
