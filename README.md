@@ -1,19 +1,29 @@
-## GIT REPO ##
+# CPSC 463 Project
+## GIT REPO
 Initiated inside the custom addons folder of odoo15.
 
 # Python Unit Testing 
-# Hospital Appointmnet
-- 
-# Hospital Patient
+## Current Test Cases
+### Hospital Appointmnet
+- none
+### Hospital Patient
 - test_compute_appointment_count
 - test_get_name
 - test_open_appointments
 - test_is_draft
-# Hospital Doctor
--
+### Hospital Doctor
+- none
 
 
-## Selenium Testing
+# Selenium Testing
+## Current Test Cases
+- My login test case
+- Positive test case of om_hospital
+- Negative tes case of om_hospital
+- test case 4
+- test case 5
+
+## Requirements
 Selenium testing via robot framework
 
 Required python packages:
@@ -28,4 +38,5 @@ Run ```robot odooTesting.robot``` to run selenium browser testing
 > > /tests
 > >
 > > etc..
+>
 > odooTesting.robot
