@@ -14,8 +14,16 @@ Initiated inside the custom addons folder of odoo15.
 
 
 ## Selenium Testing
+Selenium testing via robot framework
 
-Contents:
+Required python packages:
+- selenium
+- robotframework
+- robotframework-seleniumlibrary
+
+Run ```robot odooTesting.robot``` to run selenium browser testing
+
+## Contents
 > /om_hospital
 > > /tests
 > >
