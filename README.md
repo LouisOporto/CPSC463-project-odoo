@@ -14,6 +14,7 @@ Initiated inside the custom addons folder of odoo15.
 ### Hospital Doctor
 - none
 
+Run ```./odoo-bin --test-tags /om_hospital```
 
 # Selenium Testing
 ## Current Test Cases
