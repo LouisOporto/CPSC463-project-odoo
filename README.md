@@ -4,15 +4,11 @@ Initiated inside the custom addons folder of odoo15.
 
 # Python Unit Testing 
 ## Current Test Cases
-### Hospital Appointmnet
-- none
-### Hospital Patient
 - test_compute_appointment_count
 - test_get_name
-- test_open_appointments
-- test_is_draft
-### Hospital Doctor
-- none
+- test_patient_actions
+- test_onchange_id
+- test_unlink
 
 Run ```./odoo-bin --test-tags /om_hospital```
 
