@@ -1,146 +1,737 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-04-28T16:41:34.708437" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-04-29T16:27:41.434304" rpa="false" schemaversion="5">
 <suite id="s1" name="odooTesting" source="/opt/odoo15/custom-addons/odooTesting.robot">
-<test id="s1-t1" name="My login test case" line="10">
+<test id="s1-t1" name="My login test case" line="11">
 <kw name="I want to open odoo login page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:35.072480" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:41.576764" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:41.891372" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-29T16:27:41.891639" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x557018f5575a &lt;unknown&gt;
+#1 0x557018a084b0 &lt;unknown&gt;
+#2 0x557018a42308 &lt;unknown&gt;
+#3 0x557018a3dccf &lt;unknown&gt;
+#4 0x557018a8df0e &lt;unknown&gt;
+#5 0x557018a8d436 &lt;unknown&gt;
+#6 0x557018a7f363 &lt;unknown&gt;
+#7 0x557018a4bd63 &lt;unknown&gt;
+#8 0x557018a4c9c1 &lt;unknown&gt;
+#9 0x557018f1aa6b &lt;unknown&gt;
+#10 0x557018f1e951 &lt;unknown&gt;
+#11 0x557018f02b62 &lt;unknown&gt;
+#12 0x557018f1f4c4 &lt;unknown&gt;
+#13 0x557018ee713f &lt;unknown&gt;
+#14 0x557018f436f8 &lt;unknown&gt;
+#15 0x557018f438d6 &lt;unknown&gt;
+#16 0x557018f545a6 &lt;unknown&gt;
+#17 0x7f1dfe995aa4 &lt;unknown&gt;
+#18 0x7f1dfea22c3c &lt;unknown&gt;
+</msg>
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T16:41:35.072258" elapsed="0.889145"/>
+<status status="FAIL" start="2025-04-29T16:27:41.576431" elapsed="0.317486">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x557018f5575a &lt;unknown&gt;
+#1 0x557018a084b0 &lt;unknown&gt;
+#2 0x557018a42308 &lt;unknown&gt;
+#3 0x557018a3dccf &lt;unknown&gt;
+#4 0x557018a8df0e &lt;unknown&gt;
+#5 0x557018a8d436 &lt;unknown&gt;
+#6 0x557018a7f363 &lt;unknown&gt;
+#7 0x557018a4bd63 &lt;unknown&gt;
+#8 0x557018a4c9c1 &lt;unknown&gt;
+#9 0x557018f1aa6b &lt;unknown&gt;
+#10 0x557018f1e951 &lt;unknown&gt;
+#11 0x557018f02b62 &lt;unknown&gt;
+#12 0x557018f1f4c4 &lt;unknown&gt;
+#13 0x557018ee713f &lt;unknown&gt;
+#14 0x557018f436f8 &lt;unknown&gt;
+#15 0x557018f438d6 &lt;unknown&gt;
+#16 0x557018f545a6 &lt;unknown&gt;
+#17 0x7f1dfe995aa4 &lt;unknown&gt;
+#18 0x7f1dfea22c3c &lt;unknown&gt;
+</status>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:35.974846" level="INFO">Page title is 'Login | My Website'.</msg>
 <arg>Login | My Website</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-04-28T16:41:35.961853" elapsed="0.013146"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.894394" elapsed="0.000076"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:41:35.071712" elapsed="0.903493"/>
+<status status="FAIL" start="2025-04-29T16:27:41.575626" elapsed="0.319067">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x557018f5575a &lt;unknown&gt;
+#1 0x557018a084b0 &lt;unknown&gt;
+#2 0x557018a42308 &lt;unknown&gt;
+#3 0x557018a3dccf &lt;unknown&gt;
+#4 0x557018a8df0e &lt;unknown&gt;
+#5 0x557018a8d436 &lt;unknown&gt;
+#6 0x557018a7f363 &lt;unknown&gt;
+#7 0x557018a4bd63 &lt;unknown&gt;
+#8 0x557018a4c9c1 &lt;unknown&gt;
+#9 0x557018f1aa6b &lt;unknown&gt;
+#10 0x557018f1e951 &lt;unknown&gt;
+#11 0x557018f02b62 &lt;unknown&gt;
+#12 0x557018f1f4c4 &lt;unknown&gt;
+#13 0x557018ee713f &lt;unknown&gt;
+#14 0x557018f436f8 &lt;unknown&gt;
+#15 0x557018f438d6 &lt;unknown&gt;
+#16 0x557018f545a6 &lt;unknown&gt;
+#17 0x7f1dfe995aa4 &lt;unknown&gt;
+#18 0x7f1dfea22c3c &lt;unknown&gt;
+</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:41:40.976863" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:41:35.975701" elapsed="5.001465"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.894975" elapsed="0.000057"/>
 </kw>
 <kw name="Input my username">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:40.979392" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
-<arg>login</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T16:41:40.978700" elapsed="0.137333"/>
-</kw>
 <arg>louisoporto042@csu.fullerton.edu</arg>
-<status status="PASS" start="2025-04-28T16:41:40.977947" elapsed="0.138245"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.895414" elapsed="0.000054"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:41:46.116997" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:41:41.116488" elapsed="5.000721"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.895700" elapsed="0.000045"/>
 </kw>
 <kw name="Input my password">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:46.118646" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
-<arg>password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T16:41:46.118243" elapsed="0.103507"/>
-</kw>
 <arg>odoo15</arg>
-<status status="PASS" start="2025-04-28T16:41:46.117718" elapsed="0.104142"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.896021" elapsed="0.000048"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:41:51.222901" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:41:46.222050" elapsed="5.001149"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.896263" elapsed="0.000035"/>
 </kw>
 <kw name="Submit my credentials">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:51.225272" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
-<arg>//*[contains(text(),'Log in')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T16:41:51.224815" elapsed="0.942028"/>
-</kw>
-<status status="PASS" start="2025-04-28T16:41:51.224005" elapsed="0.943105"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.896562" elapsed="0.000052"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:41:57.168298" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:41:52.167510" elapsed="5.001043"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.896790" elapsed="0.000042"/>
 </kw>
 <kw name="I should see this page">
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-28T16:41:57.181354" level="INFO">Page title is 'Odoo - Discuss'.</msg>
-<arg>Odoo - Discuss</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-04-28T16:41:57.169828" elapsed="0.011652"/>
-</kw>
-<status status="PASS" start="2025-04-28T16:41:57.169201" elapsed="0.012508"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.897062" elapsed="0.000055"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:42:02.182668" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:41:57.182219" elapsed="5.000584"/>
+<status status="NOT RUN" start="2025-04-29T16:27:41.897350" elapsed="0.000053"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T16:42:02.183282" elapsed="0.087424"/>
+<status status="PASS" start="2025-04-29T16:27:41.897780" elapsed="0.000206"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:41:35.071105" elapsed="27.199743"/>
+<status status="FAIL" start="2025-04-29T16:27:41.574820" elapsed="0.323310">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x557018f5575a &lt;unknown&gt;
+#1 0x557018a084b0 &lt;unknown&gt;
+#2 0x557018a42308 &lt;unknown&gt;
+#3 0x557018a3dccf &lt;unknown&gt;
+#4 0x557018a8df0e &lt;unknown&gt;
+#5 0x557018a8d436 &lt;unknown&gt;
+#6 0x557018a7f363 &lt;unknown&gt;
+#7 0x557018a4bd63 &lt;unknown&gt;
+#8 0x557018a4c9c1 &lt;unknown&gt;
+#9 0x557018f1aa6b &lt;unknown&gt;
+#10 0x557018f1e951 &lt;unknown&gt;
+#11 0x557018f02b62 &lt;unknown&gt;
+#12 0x557018f1f4c4 &lt;unknown&gt;
+#13 0x557018ee713f &lt;unknown&gt;
+#14 0x557018f436f8 &lt;unknown&gt;
+#15 0x557018f438d6 &lt;unknown&gt;
+#16 0x557018f545a6 &lt;unknown&gt;
+#17 0x7f1dfe995aa4 &lt;unknown&gt;
+#18 0x7f1dfea22c3c &lt;unknown&gt;
+</status>
 </test>
-<test id="s1-t2" name="Positive test case of om_hospital" line="23">
+<test id="s1-t2" name="Positive test case of om_hospital" line="24">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T16:27:41.899761" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:42.168991" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-29T16:27:42.169298" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x56034604775a &lt;unknown&gt;
+#1 0x560345afa4b0 &lt;unknown&gt;
+#2 0x560345b34308 &lt;unknown&gt;
+#3 0x560345b2fccf &lt;unknown&gt;
+#4 0x560345b7ff0e &lt;unknown&gt;
+#5 0x560345b7f436 &lt;unknown&gt;
+#6 0x560345b71363 &lt;unknown&gt;
+#7 0x560345b3dd63 &lt;unknown&gt;
+#8 0x560345b3e9c1 &lt;unknown&gt;
+#9 0x56034600ca6b &lt;unknown&gt;
+#10 0x560346010951 &lt;unknown&gt;
+#11 0x560345ff4b62 &lt;unknown&gt;
+#12 0x5603460114c4 &lt;unknown&gt;
+#13 0x560345fd913f &lt;unknown&gt;
+#14 0x5603460356f8 &lt;unknown&gt;
+#15 0x5603460358d6 &lt;unknown&gt;
+#16 0x5603460465a6 &lt;unknown&gt;
+#17 0x7f774d8e0aa4 &lt;unknown&gt;
+#18 0x7f774d96dc3c &lt;unknown&gt;
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-29T16:27:41.899485" elapsed="0.270971">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x56034604775a &lt;unknown&gt;
+#1 0x560345afa4b0 &lt;unknown&gt;
+#2 0x560345b34308 &lt;unknown&gt;
+#3 0x560345b2fccf &lt;unknown&gt;
+#4 0x560345b7ff0e &lt;unknown&gt;
+#5 0x560345b7f436 &lt;unknown&gt;
+#6 0x560345b71363 &lt;unknown&gt;
+#7 0x560345b3dd63 &lt;unknown&gt;
+#8 0x560345b3e9c1 &lt;unknown&gt;
+#9 0x56034600ca6b &lt;unknown&gt;
+#10 0x560346010951 &lt;unknown&gt;
+#11 0x560345ff4b62 &lt;unknown&gt;
+#12 0x5603460114c4 &lt;unknown&gt;
+#13 0x560345fd913f &lt;unknown&gt;
+#14 0x5603460356f8 &lt;unknown&gt;
+#15 0x5603460358d6 &lt;unknown&gt;
+#16 0x5603460465a6 &lt;unknown&gt;
+#17 0x7f774d8e0aa4 &lt;unknown&gt;
+#18 0x7f774d96dc3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.170870" elapsed="0.000075"/>
+</kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:42:03.271972" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:42:02.271410" elapsed="1.000764"/>
+<status status="NOT RUN" start="2025-04-29T16:27:42.171137" elapsed="0.000087"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:42:02.271122" elapsed="1.001461"/>
-</test>
-<test id="s1-t3" name="Negative test case of om_hospital" line="25">
+<kw name="Input my username">
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.171480" elapsed="0.000048"/>
+</kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:42:04.274090" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:42:03.273467" elapsed="1.000838"/>
+<status status="NOT RUN" start="2025-04-29T16:27:42.171648" elapsed="0.000034"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:42:03.272959" elapsed="1.001744"/>
-</test>
-<test id="s1-t4" name="test case 4" line="27">
+<kw name="Input my password">
+<arg>odoo15</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.171810" elapsed="0.000031"/>
+</kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:42:05.275867" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:42:04.275380" elapsed="1.000675"/>
+<status status="NOT RUN" start="2025-04-29T16:27:42.171940" elapsed="0.000031"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:42:04.275075" elapsed="1.001355"/>
-</test>
-<test id="s1-t5" name="test case 5" line="29">
+<kw name="Submit my credentials">
+<status status="NOT RUN" start="2025-04-29T16:27:42.172102" elapsed="0.000033"/>
+</kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T16:42:06.277966" level="INFO">Slept 1 second.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.172265" elapsed="0.000035"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:41.899109" elapsed="0.273353">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x56034604775a &lt;unknown&gt;
+#1 0x560345afa4b0 &lt;unknown&gt;
+#2 0x560345b34308 &lt;unknown&gt;
+#3 0x560345b2fccf &lt;unknown&gt;
+#4 0x560345b7ff0e &lt;unknown&gt;
+#5 0x560345b7f436 &lt;unknown&gt;
+#6 0x560345b71363 &lt;unknown&gt;
+#7 0x560345b3dd63 &lt;unknown&gt;
+#8 0x560345b3e9c1 &lt;unknown&gt;
+#9 0x56034600ca6b &lt;unknown&gt;
+#10 0x560346010951 &lt;unknown&gt;
+#11 0x560345ff4b62 &lt;unknown&gt;
+#12 0x5603460114c4 &lt;unknown&gt;
+#13 0x560345fd913f &lt;unknown&gt;
+#14 0x5603460356f8 &lt;unknown&gt;
+#15 0x5603460358d6 &lt;unknown&gt;
+#16 0x5603460465a6 &lt;unknown&gt;
+#17 0x7f774d8e0aa4 &lt;unknown&gt;
+#18 0x7f774d96dc3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="I want to open om_hospital page">
+<status status="NOT RUN" start="2025-04-29T16:27:42.172760" elapsed="0.000377"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T16:27:42.173582" elapsed="0.000202"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:41.898601" elapsed="0.275324">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x56034604775a &lt;unknown&gt;
+#1 0x560345afa4b0 &lt;unknown&gt;
+#2 0x560345b34308 &lt;unknown&gt;
+#3 0x560345b2fccf &lt;unknown&gt;
+#4 0x560345b7ff0e &lt;unknown&gt;
+#5 0x560345b7f436 &lt;unknown&gt;
+#6 0x560345b71363 &lt;unknown&gt;
+#7 0x560345b3dd63 &lt;unknown&gt;
+#8 0x560345b3e9c1 &lt;unknown&gt;
+#9 0x56034600ca6b &lt;unknown&gt;
+#10 0x560346010951 &lt;unknown&gt;
+#11 0x560345ff4b62 &lt;unknown&gt;
+#12 0x5603460114c4 &lt;unknown&gt;
+#13 0x560345fd913f &lt;unknown&gt;
+#14 0x5603460356f8 &lt;unknown&gt;
+#15 0x5603460358d6 &lt;unknown&gt;
+#16 0x5603460465a6 &lt;unknown&gt;
+#17 0x7f774d8e0aa4 &lt;unknown&gt;
+#18 0x7f774d96dc3c &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t3" name="Negative test case of om_hospital" line="29">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T16:27:42.176064" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:42.435157" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-29T16:27:42.435419" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x563c22a1275a &lt;unknown&gt;
+#1 0x563c224c54b0 &lt;unknown&gt;
+#2 0x563c224ff308 &lt;unknown&gt;
+#3 0x563c224faccf &lt;unknown&gt;
+#4 0x563c2254af0e &lt;unknown&gt;
+#5 0x563c2254a436 &lt;unknown&gt;
+#6 0x563c2253c363 &lt;unknown&gt;
+#7 0x563c22508d63 &lt;unknown&gt;
+#8 0x563c225099c1 &lt;unknown&gt;
+#9 0x563c229d7a6b &lt;unknown&gt;
+#10 0x563c229db951 &lt;unknown&gt;
+#11 0x563c229bfb62 &lt;unknown&gt;
+#12 0x563c229dc4c4 &lt;unknown&gt;
+#13 0x563c229a413f &lt;unknown&gt;
+#14 0x563c22a006f8 &lt;unknown&gt;
+#15 0x563c22a008d6 &lt;unknown&gt;
+#16 0x563c22a115a6 &lt;unknown&gt;
+#17 0x7fd29c291aa4 &lt;unknown&gt;
+#18 0x7fd29c31ec3c &lt;unknown&gt;
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-29T16:27:42.175713" elapsed="0.260741">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x563c22a1275a &lt;unknown&gt;
+#1 0x563c224c54b0 &lt;unknown&gt;
+#2 0x563c224ff308 &lt;unknown&gt;
+#3 0x563c224faccf &lt;unknown&gt;
+#4 0x563c2254af0e &lt;unknown&gt;
+#5 0x563c2254a436 &lt;unknown&gt;
+#6 0x563c2253c363 &lt;unknown&gt;
+#7 0x563c22508d63 &lt;unknown&gt;
+#8 0x563c225099c1 &lt;unknown&gt;
+#9 0x563c229d7a6b &lt;unknown&gt;
+#10 0x563c229db951 &lt;unknown&gt;
+#11 0x563c229bfb62 &lt;unknown&gt;
+#12 0x563c229dc4c4 &lt;unknown&gt;
+#13 0x563c229a413f &lt;unknown&gt;
+#14 0x563c22a006f8 &lt;unknown&gt;
+#15 0x563c22a008d6 &lt;unknown&gt;
+#16 0x563c22a115a6 &lt;unknown&gt;
+#17 0x7fd29c291aa4 &lt;unknown&gt;
+#18 0x7fd29c31ec3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.436727" elapsed="0.000091"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T16:42:05.277290" elapsed="1.000863"/>
+<status status="NOT RUN" start="2025-04-29T16:27:42.436973" elapsed="0.000036"/>
 </kw>
-<status status="PASS" start="2025-04-28T16:42:05.276807" elapsed="1.001702"/>
+<kw name="Input my username">
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.437187" elapsed="0.000041"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.437334" elapsed="0.000031"/>
+</kw>
+<kw name="Input my password">
+<arg>odoo15</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.437483" elapsed="0.000034"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.437608" elapsed="0.000028"/>
+</kw>
+<kw name="Submit my credentials">
+<status status="NOT RUN" start="2025-04-29T16:27:42.437748" elapsed="0.000032"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.437867" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.175328" elapsed="0.262841">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x563c22a1275a &lt;unknown&gt;
+#1 0x563c224c54b0 &lt;unknown&gt;
+#2 0x563c224ff308 &lt;unknown&gt;
+#3 0x563c224faccf &lt;unknown&gt;
+#4 0x563c2254af0e &lt;unknown&gt;
+#5 0x563c2254a436 &lt;unknown&gt;
+#6 0x563c2253c363 &lt;unknown&gt;
+#7 0x563c22508d63 &lt;unknown&gt;
+#8 0x563c225099c1 &lt;unknown&gt;
+#9 0x563c229d7a6b &lt;unknown&gt;
+#10 0x563c229db951 &lt;unknown&gt;
+#11 0x563c229bfb62 &lt;unknown&gt;
+#12 0x563c229dc4c4 &lt;unknown&gt;
+#13 0x563c229a413f &lt;unknown&gt;
+#14 0x563c22a006f8 &lt;unknown&gt;
+#15 0x563c22a008d6 &lt;unknown&gt;
+#16 0x563c22a115a6 &lt;unknown&gt;
+#17 0x7fd29c291aa4 &lt;unknown&gt;
+#18 0x7fd29c31ec3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="I want to open om_hospital page">
+<status status="NOT RUN" start="2025-04-29T16:27:42.438470" elapsed="0.000042"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Odoo - Discuss</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.438691" elapsed="0.000034"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T16:27:42.439047" elapsed="0.000177"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.174678" elapsed="0.264664">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x563c22a1275a &lt;unknown&gt;
+#1 0x563c224c54b0 &lt;unknown&gt;
+#2 0x563c224ff308 &lt;unknown&gt;
+#3 0x563c224faccf &lt;unknown&gt;
+#4 0x563c2254af0e &lt;unknown&gt;
+#5 0x563c2254a436 &lt;unknown&gt;
+#6 0x563c2253c363 &lt;unknown&gt;
+#7 0x563c22508d63 &lt;unknown&gt;
+#8 0x563c225099c1 &lt;unknown&gt;
+#9 0x563c229d7a6b &lt;unknown&gt;
+#10 0x563c229db951 &lt;unknown&gt;
+#11 0x563c229bfb62 &lt;unknown&gt;
+#12 0x563c229dc4c4 &lt;unknown&gt;
+#13 0x563c229a413f &lt;unknown&gt;
+#14 0x563c22a006f8 &lt;unknown&gt;
+#15 0x563c22a008d6 &lt;unknown&gt;
+#16 0x563c22a115a6 &lt;unknown&gt;
+#17 0x7fd29c291aa4 &lt;unknown&gt;
+#18 0x7fd29c31ec3c &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t4" name="test case 4" line="35">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T16:27:42.440798" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:42.752957" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-29T16:27:42.753155" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55943dcbc75a &lt;unknown&gt;
+#1 0x55943d76f4b0 &lt;unknown&gt;
+#2 0x55943d7a9308 &lt;unknown&gt;
+#3 0x55943d7a4ccf &lt;unknown&gt;
+#4 0x55943d7f4f0e &lt;unknown&gt;
+#5 0x55943d7f4436 &lt;unknown&gt;
+#6 0x55943d7e6363 &lt;unknown&gt;
+#7 0x55943d7b2d63 &lt;unknown&gt;
+#8 0x55943d7b39c1 &lt;unknown&gt;
+#9 0x55943dc81a6b &lt;unknown&gt;
+#10 0x55943dc85951 &lt;unknown&gt;
+#11 0x55943dc69b62 &lt;unknown&gt;
+#12 0x55943dc864c4 &lt;unknown&gt;
+#13 0x55943dc4e13f &lt;unknown&gt;
+#14 0x55943dcaa6f8 &lt;unknown&gt;
+#15 0x55943dcaa8d6 &lt;unknown&gt;
+#16 0x55943dcbb5a6 &lt;unknown&gt;
+#17 0x7f2a90209aa4 &lt;unknown&gt;
+#18 0x7f2a90296c3c &lt;unknown&gt;
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-29T16:27:42.440491" elapsed="0.313455">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55943dcbc75a &lt;unknown&gt;
+#1 0x55943d76f4b0 &lt;unknown&gt;
+#2 0x55943d7a9308 &lt;unknown&gt;
+#3 0x55943d7a4ccf &lt;unknown&gt;
+#4 0x55943d7f4f0e &lt;unknown&gt;
+#5 0x55943d7f4436 &lt;unknown&gt;
+#6 0x55943d7e6363 &lt;unknown&gt;
+#7 0x55943d7b2d63 &lt;unknown&gt;
+#8 0x55943d7b39c1 &lt;unknown&gt;
+#9 0x55943dc81a6b &lt;unknown&gt;
+#10 0x55943dc85951 &lt;unknown&gt;
+#11 0x55943dc69b62 &lt;unknown&gt;
+#12 0x55943dc864c4 &lt;unknown&gt;
+#13 0x55943dc4e13f &lt;unknown&gt;
+#14 0x55943dcaa6f8 &lt;unknown&gt;
+#15 0x55943dcaa8d6 &lt;unknown&gt;
+#16 0x55943dcbb5a6 &lt;unknown&gt;
+#17 0x7f2a90209aa4 &lt;unknown&gt;
+#18 0x7f2a90296c3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.754319" elapsed="0.000067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.754528" elapsed="0.000033"/>
+</kw>
+<kw name="Input my username">
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.754740" elapsed="0.000048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.754886" elapsed="0.000025"/>
+</kw>
+<kw name="Input my password">
+<arg>odoo15</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:42.755004" elapsed="0.000023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.755097" elapsed="0.000022"/>
+</kw>
+<kw name="Submit my credentials">
+<status status="NOT RUN" start="2025-04-29T16:27:42.755204" elapsed="0.000022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:42.755289" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.440153" elapsed="0.315274">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55943dcbc75a &lt;unknown&gt;
+#1 0x55943d76f4b0 &lt;unknown&gt;
+#2 0x55943d7a9308 &lt;unknown&gt;
+#3 0x55943d7a4ccf &lt;unknown&gt;
+#4 0x55943d7f4f0e &lt;unknown&gt;
+#5 0x55943d7f4436 &lt;unknown&gt;
+#6 0x55943d7e6363 &lt;unknown&gt;
+#7 0x55943d7b2d63 &lt;unknown&gt;
+#8 0x55943d7b39c1 &lt;unknown&gt;
+#9 0x55943dc81a6b &lt;unknown&gt;
+#10 0x55943dc85951 &lt;unknown&gt;
+#11 0x55943dc69b62 &lt;unknown&gt;
+#12 0x55943dc864c4 &lt;unknown&gt;
+#13 0x55943dc4e13f &lt;unknown&gt;
+#14 0x55943dcaa6f8 &lt;unknown&gt;
+#15 0x55943dcaa8d6 &lt;unknown&gt;
+#16 0x55943dcbb5a6 &lt;unknown&gt;
+#17 0x7f2a90209aa4 &lt;unknown&gt;
+#18 0x7f2a90296c3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="I want to open om_hospital page">
+<status status="NOT RUN" start="2025-04-29T16:27:42.755675" elapsed="0.000033"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T16:27:42.755993" elapsed="0.000412"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.439762" elapsed="0.316779">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55943dcbc75a &lt;unknown&gt;
+#1 0x55943d76f4b0 &lt;unknown&gt;
+#2 0x55943d7a9308 &lt;unknown&gt;
+#3 0x55943d7a4ccf &lt;unknown&gt;
+#4 0x55943d7f4f0e &lt;unknown&gt;
+#5 0x55943d7f4436 &lt;unknown&gt;
+#6 0x55943d7e6363 &lt;unknown&gt;
+#7 0x55943d7b2d63 &lt;unknown&gt;
+#8 0x55943d7b39c1 &lt;unknown&gt;
+#9 0x55943dc81a6b &lt;unknown&gt;
+#10 0x55943dc85951 &lt;unknown&gt;
+#11 0x55943dc69b62 &lt;unknown&gt;
+#12 0x55943dc864c4 &lt;unknown&gt;
+#13 0x55943dc4e13f &lt;unknown&gt;
+#14 0x55943dcaa6f8 &lt;unknown&gt;
+#15 0x55943dcaa8d6 &lt;unknown&gt;
+#16 0x55943dcbb5a6 &lt;unknown&gt;
+#17 0x7f2a90209aa4 &lt;unknown&gt;
+#18 0x7f2a90296c3c &lt;unknown&gt;
+</status>
+</test>
+<test id="s1-t5" name="test case 5" line="40">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T16:27:42.757990" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<msg time="2025-04-29T16:27:43.013043" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-29T16:27:43.013463" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55e4fd45475a &lt;unknown&gt;
+#1 0x55e4fcf074b0 &lt;unknown&gt;
+#2 0x55e4fcf41308 &lt;unknown&gt;
+#3 0x55e4fcf3cccf &lt;unknown&gt;
+#4 0x55e4fcf8cf0e &lt;unknown&gt;
+#5 0x55e4fcf8c436 &lt;unknown&gt;
+#6 0x55e4fcf7e363 &lt;unknown&gt;
+#7 0x55e4fcf4ad63 &lt;unknown&gt;
+#8 0x55e4fcf4b9c1 &lt;unknown&gt;
+#9 0x55e4fd419a6b &lt;unknown&gt;
+#10 0x55e4fd41d951 &lt;unknown&gt;
+#11 0x55e4fd401b62 &lt;unknown&gt;
+#12 0x55e4fd41e4c4 &lt;unknown&gt;
+#13 0x55e4fd3e613f &lt;unknown&gt;
+#14 0x55e4fd4426f8 &lt;unknown&gt;
+#15 0x55e4fd4428d6 &lt;unknown&gt;
+#16 0x55e4fd4535a6 &lt;unknown&gt;
+#17 0x7f5cb8480aa4 &lt;unknown&gt;
+#18 0x7f5cb850dc3c &lt;unknown&gt;
+</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-29T16:27:42.757705" elapsed="0.257084">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55e4fd45475a &lt;unknown&gt;
+#1 0x55e4fcf074b0 &lt;unknown&gt;
+#2 0x55e4fcf41308 &lt;unknown&gt;
+#3 0x55e4fcf3cccf &lt;unknown&gt;
+#4 0x55e4fcf8cf0e &lt;unknown&gt;
+#5 0x55e4fcf8c436 &lt;unknown&gt;
+#6 0x55e4fcf7e363 &lt;unknown&gt;
+#7 0x55e4fcf4ad63 &lt;unknown&gt;
+#8 0x55e4fcf4b9c1 &lt;unknown&gt;
+#9 0x55e4fd419a6b &lt;unknown&gt;
+#10 0x55e4fd41d951 &lt;unknown&gt;
+#11 0x55e4fd401b62 &lt;unknown&gt;
+#12 0x55e4fd41e4c4 &lt;unknown&gt;
+#13 0x55e4fd3e613f &lt;unknown&gt;
+#14 0x55e4fd4426f8 &lt;unknown&gt;
+#15 0x55e4fd4428d6 &lt;unknown&gt;
+#16 0x55e4fd4535a6 &lt;unknown&gt;
+#17 0x7f5cb8480aa4 &lt;unknown&gt;
+#18 0x7f5cb850dc3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015083" elapsed="0.000051"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015260" elapsed="0.000039"/>
+</kw>
+<kw name="Input my username">
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015494" elapsed="0.000043"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015636" elapsed="0.000027"/>
+</kw>
+<kw name="Input my password">
+<arg>odoo15</arg>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015760" elapsed="0.000025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:43.015856" elapsed="0.000024"/>
+</kw>
+<kw name="Submit my credentials">
+<status status="NOT RUN" start="2025-04-29T16:27:43.015970" elapsed="0.000022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-04-29T16:27:43.016798" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.757376" elapsed="0.259588">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55e4fd45475a &lt;unknown&gt;
+#1 0x55e4fcf074b0 &lt;unknown&gt;
+#2 0x55e4fcf41308 &lt;unknown&gt;
+#3 0x55e4fcf3cccf &lt;unknown&gt;
+#4 0x55e4fcf8cf0e &lt;unknown&gt;
+#5 0x55e4fcf8c436 &lt;unknown&gt;
+#6 0x55e4fcf7e363 &lt;unknown&gt;
+#7 0x55e4fcf4ad63 &lt;unknown&gt;
+#8 0x55e4fcf4b9c1 &lt;unknown&gt;
+#9 0x55e4fd419a6b &lt;unknown&gt;
+#10 0x55e4fd41d951 &lt;unknown&gt;
+#11 0x55e4fd401b62 &lt;unknown&gt;
+#12 0x55e4fd41e4c4 &lt;unknown&gt;
+#13 0x55e4fd3e613f &lt;unknown&gt;
+#14 0x55e4fd4426f8 &lt;unknown&gt;
+#15 0x55e4fd4428d6 &lt;unknown&gt;
+#16 0x55e4fd4535a6 &lt;unknown&gt;
+#17 0x7f5cb8480aa4 &lt;unknown&gt;
+#18 0x7f5cb850dc3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="I want to open om_hospital page">
+<status status="NOT RUN" start="2025-04-29T16:27:43.017226" elapsed="0.000032"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T16:27:43.017573" elapsed="0.000158"/>
+</kw>
+<status status="FAIL" start="2025-04-29T16:27:42.756916" elapsed="0.260926">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55e4fd45475a &lt;unknown&gt;
+#1 0x55e4fcf074b0 &lt;unknown&gt;
+#2 0x55e4fcf41308 &lt;unknown&gt;
+#3 0x55e4fcf3cccf &lt;unknown&gt;
+#4 0x55e4fcf8cf0e &lt;unknown&gt;
+#5 0x55e4fcf8c436 &lt;unknown&gt;
+#6 0x55e4fcf7e363 &lt;unknown&gt;
+#7 0x55e4fcf4ad63 &lt;unknown&gt;
+#8 0x55e4fcf4b9c1 &lt;unknown&gt;
+#9 0x55e4fd419a6b &lt;unknown&gt;
+#10 0x55e4fd41d951 &lt;unknown&gt;
+#11 0x55e4fd401b62 &lt;unknown&gt;
+#12 0x55e4fd41e4c4 &lt;unknown&gt;
+#13 0x55e4fd3e613f &lt;unknown&gt;
+#14 0x55e4fd4426f8 &lt;unknown&gt;
+#15 0x55e4fd4428d6 &lt;unknown&gt;
+#16 0x55e4fd4535a6 &lt;unknown&gt;
+#17 0x7f5cb8480aa4 &lt;unknown&gt;
+#18 0x7f5cb850dc3c &lt;unknown&gt;
+</status>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="PASS" start="2025-04-28T16:41:34.709076" elapsed="31.570032"/>
+<status status="FAIL" start="2025-04-29T16:27:41.435554" elapsed="1.583242"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="odooTesting" id="s1" pass="5" fail="0" skip="0">odooTesting</stat>
+<stat name="odooTesting" id="s1" pass="0" fail="5" skip="0">odooTesting</stat>
 </suite>
 </statistics>
 <errors>
