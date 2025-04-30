@@ -37,7 +37,7 @@ Run ```robot odooTesting.robot``` to run selenium browser testing
 ## Contents
 > /om_hospital
 > > /tests
-> >
-> > etc..
+> > 
+> > test_hospital.py
 >
 > odooTesting.robot
