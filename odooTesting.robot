@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Simple example using SeleniumLibrary.
+Documentation     om_hospital testing using SeleniumLibrary.
 Library           SeleniumLibrary
 
 *** Variables ***
@@ -21,23 +21,23 @@ My login test case
     Sleep    1s   
     [Teardown]    Close Browser
 
-Positive test case of om_hospital    
+Create patient and check inforamtion
     I want to login into odoo
     I want to open om_hospital page
     [Teardown]    Close Browser
 
-Negative test case of om_hospital
+Remove doctors and check availability
     I want to login into odoo
     I want to open om_hospital page
     Run Keyword And Expect Error  *  Title Should Be  Odoo - Discuss
     [Teardown]    Close Browser
 
-test case 4
+Create appointment and check patient record
     I want to login into odoo
     I want to open om_hospital page
     [Teardown]    Close Browser
 
-test case 5
+Remove patient record and check if they exist
     I want to login into odoo
     I want to open om_hospital page
     [Teardown]    Close Browser
