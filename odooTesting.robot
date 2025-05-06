@@ -29,7 +29,7 @@ Positive test case of om_hospital
 Negative test case of om_hospital
     I want to login into odoo
     I want to open om_hospital page
-    Title Should Be   Odoo - Discuss
+    Run Keyword And Expect Error  *  Title Should Be  Odoo - Discuss
     [Teardown]    Close Browser
 
 test case 4
