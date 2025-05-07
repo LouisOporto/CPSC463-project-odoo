@@ -6,7 +6,6 @@ Library           SeleniumLibrary
 ${LOGIN URL}      http://localhost:8069/web/login/
 ${HOSPITAL URL}   http://localhost:8069/web#cids=1&action=405
 ${DOCTOR URL}     http://localhost:8069/web#cids=1&action=407
-${APPOINTMENT URL}  http://localhost:8069/web#cids=&action=409
 ${BROWSER}        Chrome
 
 *** Test Cases ***
@@ -39,16 +38,16 @@ Remove doctors and check availability
     I want to login into odoo
     I want to open om_hospital page
     I want to remove appointment  John Doe
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Page Should Contain Element  //*[contains(text(), 'John Doe')]
+    I want to remove patient  John Doe
     Go To  ${DOCTOR URL}
     Sleep  2s
     Page Should Contain Element  //*[contains(text(), 'Main Doctor')]
     Sleep  1s
     I want to remove doctor  Main Doctor
-    Run Keyword And Expect Error  *  //*[contains(text(), 'Main Doctor')]
-    Go To  ${HOSPITAL URL}
-    Sleep  2s
-    Page Should Contain Element  //*[contains(text(), 'John Doe')]
-    I want to remove patient  John Doe
+    Run Keyword And Expect Error  ValueError  //*[contains(text(), 'Main Doctor')]
     [Teardown]    Close Browser
 
 *** Keywords ***
