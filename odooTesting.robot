@@ -104,13 +104,15 @@ I want to create patient
     Sleep  2s
     Go To  ${HOSPITAL URL}
     Sleep  2s
-    Text Should Match  John Doe
+    Click Element  //*[contains(text(), '${name}')]
+    Sleep  1s
+    Text Should Match  ${name}
     Text Should Match  Male
     Text Should Match  54
     Text Should Match  New Patient Created and should match
     Sleep  3s
 
-Remove test patient
+I want to remove patient
     [Arguments]  ${name}
     Click Element  //*[contains(text(), '${name}')]
     Sleep  1s
@@ -121,3 +123,86 @@ Remove test patient
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
     Sleep  1s
+
+I want to create doctor
+    [Arguments]  ${doctor_name}
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), 'Create')]
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input  ${doctor_name}
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input  32
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea  The only doctor here
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Save')]
+    Sleep  1s
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), '${doctor_name}')]
+    Sleep  1s
+    Text Should Match  ${doctor_name}
+    Text Should Match  Male
+    Text Should Match  32
+    Text Should Match  The only doctor here
+    Sleep  3s
+
+I want to remove doctor
+    [Arguments]  ${doctor_name}
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), '${doctor_name})]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Action')]
+    Sleep  1s
+    Mouse Over  //*[contains(text(), 'Delete')]
+    Click Element  //*[contains(text(), 'Delete')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Ok')]
+    Sleep  1s
+
+I want to create appointment
+    [Arguments]  ${patient_name}  ${doctor_name}
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), '${patient_name}')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Appointments')]
+    Sleep  2s
+    Click Element  //*[contains(text(), 'Create')]
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Date')]/parent::td/parent::tr/td[2]/div/input  05/14/2025
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Doctor')]/parent::td/parent::tr/td[2]/div/div[1]/div/input  ${doctor_name}
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Check Up Time')]  05/14/2025
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Confirm')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Ok')]
+    Sleep  1s
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), '${patient_name}')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Appointments')]
+    Sleep  2s
+    Text Should Match  New Patient Created and should match
+    Text Should Match  54
+    Text Should Match  ${doctor_name}
+    Text Should Match  Male
+    Text Should Match  05/14/2025
+    Text Should Match  Confirmed
+    Sleep 3s
+
+I want to remove appointment
+    [Arguments]  ${patient_name}
+    Click Element  //*[contains(text(), '${patient_name}')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Appointments')]
+    Sleep  2s
