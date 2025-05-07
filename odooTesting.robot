@@ -123,7 +123,7 @@ I want to remove patient
     Click Element  //*[contains(text(), 'Delete')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
-    Sleep  1s
+    Sleep  3s
 
 I want to create doctor
     [Arguments]  ${doctor_name}
@@ -163,7 +163,7 @@ I want to remove doctor
     Click Element  //*[contains(text(), 'Delete')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
-    Sleep  1s
+    Sleep  3s
 
 I want to create appointment
     [Arguments]  ${patient_name}  ${doctor_name}
@@ -224,4 +224,9 @@ I want to remove appointment
     Sleep  2s
     Clicke Element  //*[contains(text(), '05/14/2025')]
     Sleep  1s
-    Click Element  //*
+    Click Element  //*[contains(text(), 'Actions')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Delete')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Ok')]
+    Sleep  3s
