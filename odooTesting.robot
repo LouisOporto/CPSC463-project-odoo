@@ -19,7 +19,13 @@ My login test case
 Create patient and check inforamtion
     I want to login into odoo
     I want to open om_hospital page
-    I want to create test patient
+    I want to create test patient  John Doe
+    [Teardown]    Close Browser
+
+Remove patient record and check if they exist
+    I want to login into odoo
+    I want to open om_hospital page
+    Remove test patient  John Doe
     [Teardown]    Close Browser
 
 Remove doctors and check availability
@@ -32,12 +38,6 @@ Create appointment and check patient record
     I want to login into odoo
     I want to open om_hospital page
     [Teardown]    Close Browser
-
-Remove patient record and check if they exist
-    I want to login into odoo
-    I want to open om_hospital page
-    [Teardown]    Close Browser
-
 
 *** Keywords ***
 I want to open odoo login page
@@ -82,9 +82,10 @@ Text Should Match
     Sleep  1s
 
 I want to create test patient
+    [Arguments]  ${name}
     Click Element  //*[contains(text(), 'Create')]
     Sleep  1s
-    Input Text  //*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input  John Doe
+    Input Text  //*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input  ${name}
     Sleep  1s
     Input Text  //*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input  Administrator
     Sleep  1s
@@ -105,10 +106,12 @@ I want to create test patient
     Sleep  3s
 
 Remove test patient
-    Click Element  //*[contains(text(), 'John Doe')]
+    [Arguments]  ${name}
+    Click Element  //*[contains(text(), '${name}')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Action')]
     Sleep  1s
+    Mouse Over  //*[contains(text(), 'Delete')]
     Click Element  //*[contains(text(), 'Delete')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
