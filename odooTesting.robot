@@ -72,3 +72,19 @@ I want to open om_hospital page
     Sleep    1s
     Title Should Be    Odoo - Patients
     Sleep    1s
+
+I want to create test patient
+    Click Element  //*[contains(text(), 'Create')]
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input  John Doe
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input
+    Sleep  2s
+    Click Element  //*[contains(text(), 'Administrator')]
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea[1]  New Patient Created and should match
+    Sleep  1s
+    Input Text  //*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input  54
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Save')]
+    Sleep  3s
