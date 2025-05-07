@@ -14,25 +14,26 @@ My login test case
     I want to login into odoo
     I should see this page  
     Sleep  1s   
-    [Teardown]    Close Browser
+    [Teardown]  Close Browser
 
 Create patient and check inforamtion
     I want to login into odoo
     I want to open om_hospital page
     I want to create patient  John Doe
-    [Teardown]    Close Browser
+    [Teardown]  Close Browser
 
 Create appointment and check patient record
     I want to login into odoo
     I want to create doctor  Main Doctor
     I want to create appointment  John Doe  Main Doctor
-    [Teardown]    Close Browser
+    [Teardown]  Close Browser
 
 Remove patient and catch error 
     I want to login into odoo
     I want to open om_hospital page
-    Run Keyword And Expect Error  *  I want to remove patient  John Doe
-    [Teardown]    Close Browser
+    I want to remove patient  John Doe
+    Page Should Contain Element  //*[contains(text(), 'Validation Error')]
+    [Teardown]  Close Browser
 
 Remove doctors and check availability
     I want to login into odoo
@@ -184,7 +185,9 @@ I want to create appointment
     Sleep  1s
     Click Element  //*[contains(text(), 'Medicine')]
     Sleep  1s
-    Input Text  //*[contains(text(), 'Add a line')]  Medicine for this appointment...
+    Click Element  //*[contains(text(), 'Add a line')] 
+    Sleep  1s 
+    Input Text  //*[@class='o_field_char o_field_widget o_quick_editable o_input o_required_modifier' and @name='name']  Medicine for this appointment...
     Sleep  1s
     Click Element  //*[contains(text(), 'Confirm')]
     Sleep  1s
@@ -196,19 +199,29 @@ I want to create appointment
     Sleep  2s
     Click Element  //*[contains(text(), '${patient_name}')]
     Sleep  1s
-    Click Element  //*[contains(text(), 'Appointments') and @class='o_stat_text']
-    Sleep  2s
-    Text Should Match  New Patient Created and should match
+    Click Element  //*[contains(text(), '05/14/2025')]
+    Sleep  1s
     Text Should Match  54
     Text Should Match  ${doctor_name}
     Text Should Match  Male
     Text Should Match  05/14/2025
     Text Should Match  Confirmed
-    Sleep 3s
+    Text Should Match  Prescription details here...
+    Click Element  //*[contains(text(), 'Medicine')]
+    Sleep  1s
+    Text Should Match  Medicine for this appointment...
+    Click Element  //*[contains(text(), 'Other Info')]
+    Sleep  1s
+    Text Should Match  New Patient Created and should match
+    Sleep  3s
 
 I want to remove appointment
     [Arguments]  ${patient_name}
+    Go To  ${HOSPITAL URL}
     Click Element  //*[contains(text(), '${patient_name}')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Appointments')]
     Sleep  2s
+    Clicke Element  //*[contains(text(), '05/14/2025')]
+    Sleep  1s
+    Click Element  //*
