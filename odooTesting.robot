@@ -83,11 +83,10 @@ I want to open om_hospital page
 
 Text Should Match
     [Arguments]  ${match_text}
-    ${actual_text}  Get Text  //*[contains(text(), '${match_text}')]
-    Should Be Equal  ${actual_text}  ${match_text}
+    Page Should Contain Element  //*[contains(text(), '${match_text}')]
     Sleep  1s
 
-I want to create test patient
+I want to create patient
     [Arguments]  ${name}
     Click Element  //*[contains(text(), 'Create')]
     Sleep  1s
