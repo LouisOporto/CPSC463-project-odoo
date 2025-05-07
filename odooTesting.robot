@@ -19,24 +19,30 @@ My login test case
 Create patient and check inforamtion
     I want to login into odoo
     I want to open om_hospital page
-    I want to create test patient  John Doe
-    [Teardown]    Close Browser
-
-Remove patient record and check if they exist
-    I want to login into odoo
-    I want to open om_hospital page
-    Remove test patient  John Doe
-    [Teardown]    Close Browser
-
-Remove doctors and check availability
-    I want to login into odoo
-    I want to open om_hospital page
-    Run Keyword And Expect Error  *  Title Should Be  Odoo - Discuss
+    I want to create patient  John Doe
     [Teardown]    Close Browser
 
 Create appointment and check patient record
     I want to login into odoo
+    I want to create doctor  Main Doctor
+    I want to create appointment  John Doe  Main Doctor
+    [Teardown]    Close Browser
+
+Remove patient and catch error 
+    I want to login into odoo
     I want to open om_hospital page
+    Run Keyword And Expect Error  *  I want to remove patient  John Doe
+    [Teardown]    Close Browser
+
+Remove doctors and check availability
+    I want to login into odoo
+    I want to remove appointment  John Doe
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Page Should Contain  //*[contains(text(), 'Main Doctor')]
+    Sleep  1s
+    I want to remove doctor  Main Doctor
+    Run Keyword And Expect Error  *  //*[contains(text(), 'Main Doctor')]
     [Teardown]    Close Browser
 
 *** Keywords ***
