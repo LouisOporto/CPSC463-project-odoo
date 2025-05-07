@@ -75,6 +75,12 @@ I want to open om_hospital page
     Title Should Be    Odoo - Patients
     Sleep    1s
 
+Text Should Match
+    [Arguments]  ${match_text}
+    ${actual_text}  Get Text  //*[contains(text(), '${match_text}')]
+    Should Be Equal  ${actual_text}  ${match_text}
+    Sleep  1s
+
 I want to create test patient
     Click Element  //*[contains(text(), 'Create')]
     Sleep  1s
@@ -87,4 +93,23 @@ I want to create test patient
     Input Text  //*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input  54
     Sleep  1s
     Click Element  //*[contains(text(), 'Save')]
+    Sleep  1s
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Text Should Match  John Doe
+    Text Should Match  Male
+    Text Should Match  54
+    Text Should Match  New Patient Created and should match
     Sleep  3s
+
+Remove test patient
+    Click Element  //*[contains(text(), 'John Doe')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Action')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Delete')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Ok')]
+    Sleep  1s
