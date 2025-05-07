@@ -16,9 +16,9 @@ Run ```./odoo-bin --test-tags /om_hospital```
 ## Current Test Cases
 - My login test case
 - Create patient and check information
-- Remove patient record and check if they exist
-- Remove doctors and check availability
 - Create appointment and check patient record
+- Remove patient and catch error (negative testcase)
+- Remove doctors and check availability
 
 ## Requirements
 Selenium testing via robot framework
