@@ -9,21 +9,15 @@ ${BROWSER}        Chrome
 
 *** Test Cases ***
 My login test case
-    I want to open odoo login page
-    Sleep    1s
-    Input my username    louisoporto042@csu.fullerton.edu
-    Sleep    1s   
-    Input my password    odoo15
-    Sleep    1s
-    Submit my credentials
-    Sleep    3s   
+    I want to login into odoo
     I should see this page  
-    Sleep    1s   
+    Sleep  1s   
     [Teardown]    Close Browser
 
 Create patient and check inforamtion
     I want to login into odoo
     I want to open om_hospital page
+    I want to create test patient
     [Teardown]    Close Browser
 
 Remove doctors and check availability
