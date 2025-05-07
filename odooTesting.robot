@@ -170,13 +170,13 @@ I want to create appointment
     Sleep  2s
     Click Element  //*[contains(text(), '${patient_name}')]
     Sleep  1s
-    Click Element  //*[contains(text(), 'Appointments')]
+    Click Element  //*[contains(text(), 'Appointments') and @class='o_stat_text']
     Sleep  2s
     Click Element  //*[contains(text(), 'Create')]
     Sleep  1s
     Input Text  //*[contains(text(), 'Date')]/parent::td/parent::tr/td[2]/div/input  05/14/2025
     Sleep  1s
-    Input Text  //*[contains(text(), 'Doctor')]/parent::td/parent::tr/td[2]/div/div[1]/div/input  ${doctor_name}
+    Input Text  //*[contains(text(), 'Doctor')]  ${doctor_name}
     Sleep  1s
     Input Text  //*[contains(text(), 'Check Up Time')]  05/14/2025
     Sleep  1s
