@@ -37,13 +37,18 @@ Remove patient and catch error
 
 Remove doctors and check availability
     I want to login into odoo
+    I want to open om_hospital page
     I want to remove appointment  John Doe
     Go To  ${DOCTOR URL}
     Sleep  2s
-    Page Should Contain  //*[contains(text(), 'Main Doctor')]
+    Page Should Contain Element  //*[contains(text(), 'Main Doctor')]
     Sleep  1s
     I want to remove doctor  Main Doctor
     Run Keyword And Expect Error  *  //*[contains(text(), 'Main Doctor')]
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Page Should Contain Element  //*[contains(text(), 'John Doe')]
+    I want to remove patient  John Doe
     [Teardown]    Close Browser
 
 *** Keywords ***
@@ -153,9 +158,7 @@ I want to create doctor
 
 I want to remove doctor
     [Arguments]  ${doctor_name}
-    Go To  ${HOSPITAL URL}
-    Sleep  2s
-    Click Element  //*[contains(text(), '${doctor_name})]
+    Click Element  //*[contains(text(), '${doctor_name}')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Action')]
     Sleep  1s
@@ -217,15 +220,15 @@ I want to create appointment
 
 I want to remove appointment
     [Arguments]  ${patient_name}
-    Go To  ${HOSPITAL URL}
     Click Element  //*[contains(text(), '${patient_name}')]
     Sleep  1s
-    Click Element  //*[contains(text(), 'Appointments')]
+    Click Element  //*[contains(text(), 'Appointments') and @class='o_stat_text']
     Sleep  2s
-    Clicke Element  //*[contains(text(), '05/14/2025')]
+    Click Element  //*[contains(text(), '05/14/2025')]
     Sleep  1s
-    Click Element  //*[contains(text(), 'Actions')]
+    Click Element  //*[contains(text(), 'Action')]
     Sleep  1s
+    Mouse Over  //*[contains(text(), 'Delete')]
     Click Element  //*[contains(text(), 'Delete')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
