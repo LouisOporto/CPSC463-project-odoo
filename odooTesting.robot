@@ -5,6 +5,8 @@ Library           SeleniumLibrary
 *** Variables ***
 ${LOGIN URL}      http://localhost:8069/web/login/
 ${HOSPITAL URL}   http://localhost:8069/web#cids=1&action=405
+${DOCTOR URL}     http://localhost:8069/web#cids=1&action=407
+${APPOINTMENT URL}  http://localhost:8069/web#cids=&action=409
 ${BROWSER}        Chrome
 
 *** Test Cases ***
@@ -78,9 +80,7 @@ I want to create test patient
     Sleep  1s
     Input Text  //*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input  John Doe
     Sleep  1s
-    Click Element  //*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input
-    Sleep  2s
-    Click Element  //*[contains(text(), 'Administrator')]
+    Input Text  //*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input  Administrator
     Sleep  1s
     Input Text  //*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea[1]  New Patient Created and should match
     Sleep  1s
