@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on linux)" generated="2025-05-07T11:14:03.450152" rpa="false" schemaversion="5">
+<suite id="s1" name="odooTesting" source="/opt/odoo15/custom-addons/odooTesting.robot">
+<test id="s1-t1" name="My login test case" line="13">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:03.749573" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:03.749232" elapsed="1.134131"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:04.911830" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:14:04.884173" elapsed="0.028078"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:05.913614" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:04.912804" elapsed="1.000954"/>
+</kw>
+<kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:05.915320" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:05.914722" elapsed="0.309997"/>
+</kw>
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="PASS" start="2025-05-07T11:14:05.914038" elapsed="0.310903"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:07.225664" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:06.225175" elapsed="1.000653"/>
+</kw>
+<kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:07.226781" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:07.226490" elapsed="0.135778"/>
+</kw>
+<arg>odoo15</arg>
+<status status="PASS" start="2025-05-07T11:14:07.226093" elapsed="0.136390"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:08.363123" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:07.362697" elapsed="1.000626"/>
+</kw>
+<kw name="Submit my credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:08.364225" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:08.363990" elapsed="0.147959"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:08.363602" elapsed="0.148498"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:11.512753" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:08.512255" elapsed="3.000704"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:03.748459" elapsed="7.764681"/>
+</kw>
+<kw name="I should see this page">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:11.528500" level="INFO">Page title is 'Odoo - Discuss'.</msg>
+<arg>Odoo - Discuss</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:14:11.513936" elapsed="0.014763"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:11.513546" elapsed="0.015349"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:12.530017" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:11.529389" elapsed="1.000827"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:14:12.530862" elapsed="0.144366"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:03.747553" elapsed="8.927877"/>
+</test>
+<test id="s1-t2" name="Create patient and check inforamtion" line="19">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:12.676757" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:12.676530" elapsed="1.258572"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:13.951305" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:14:13.935396" elapsed="0.016113"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:14.952554" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:13.951835" elapsed="1.000907"/>
+</kw>
+<kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:14.954420" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:14.953902" elapsed="0.234163"/>
+</kw>
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="PASS" start="2025-05-07T11:14:14.953174" elapsed="0.235025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:16.188753" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:15.188351" elapsed="1.000643"/>
+</kw>
+<kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:16.189824" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:16.189610" elapsed="0.165500"/>
+</kw>
+<arg>odoo15</arg>
+<status status="PASS" start="2025-05-07T11:14:16.189267" elapsed="0.165996"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:17.356207" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:16.355662" elapsed="1.000790"/>
+</kw>
+<kw name="Submit my credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:17.358093" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:17.357517" elapsed="0.133874"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:17.356860" elapsed="0.134744"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:20.492400" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:17.491826" elapsed="3.000812"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:12.676244" elapsed="7.816608"/>
+</kw>
+<kw name="I want to open om_hospital page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:20.494671" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:20.494213" elapsed="0.018271"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:21.514063" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:20.512831" elapsed="1.001467"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:21.524216" level="INFO">Page title is 'Odoo - Patients'.</msg>
+<arg>Odoo - Patients</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:14:21.514572" elapsed="0.009814"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:22.525298" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:21.524642" elapsed="1.000861"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:20.493468" elapsed="2.032166"/>
+</kw>
+<kw name="I want to create patient">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:22.526654" level="INFO">Clicking element '//*[contains(text(), 'Create')]'.</msg>
+<arg>//*[contains(text(), 'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:22.526450" elapsed="0.162280"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:23.689653" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:22.689071" elapsed="1.000738"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:23.690317" level="INFO">Typing text 'John Doe' into text field '//*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input'.</msg>
+<arg>//*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:23.690024" elapsed="0.156229"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:24.846829" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:23.846458" elapsed="1.000587"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:24.847737" level="INFO">Typing text 'Administrator' into text field '//*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input'.</msg>
+<arg>//*[contains(text(), 'Responsible')]/parent::td/parent::tr/td[2]/div/div[1]/div/input</arg>
+<arg>Administrator</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:24.847401" elapsed="0.175462"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:26.023497" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:25.023077" elapsed="1.000566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:26.024061" level="INFO">Typing text 'New Patient Created and should match' into text field '//*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea[1]'.</msg>
+<arg>//*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea[1]</arg>
+<arg>New Patient Created and should match</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:26.023841" elapsed="0.272998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:27.297527" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:26.297072" elapsed="1.000708"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:27.298351" level="INFO">Typing text '54' into text field '//*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input'.</msg>
+<arg>//*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input</arg>
+<arg>54</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:27.298044" elapsed="0.190144"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:28.489235" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:27.488462" elapsed="1.000991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:28.490218" level="INFO">Clicking element '//*[contains(text(), 'Save')]'.</msg>
+<arg>//*[contains(text(), 'Save')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:28.489775" elapsed="0.137809"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:29.628684" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:28.627963" elapsed="1.000905"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:29.629345" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=407'</msg>
+<arg>${DOCTOR URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:29.629121" elapsed="0.009945"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:31.640040" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:29.639383" elapsed="2.001182"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:31.644413" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:31.642766" elapsed="0.028959"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:33.673780" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:31.672164" elapsed="2.002875"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:33.677709" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:33.675854" elapsed="0.213219"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:34.890116" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:33.889427" elapsed="1.000840"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:34.905259" level="INFO">Current page contains element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:14:34.891832" elapsed="0.013550"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:35.906091" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:34.905566" elapsed="1.000883"/>
+</kw>
+<arg>${name}</arg>
+<status status="PASS" start="2025-05-07T11:14:34.890793" elapsed="1.016760"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:35.930722" level="INFO">Current page contains element '//*[contains(text(), 'Male')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:14:35.908804" elapsed="0.022081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:36.931624" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:35.931126" elapsed="1.000742"/>
+</kw>
+<arg>Male</arg>
+<status status="PASS" start="2025-05-07T11:14:35.908071" elapsed="1.024036"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:36.953996" level="INFO">Current page contains element '//*[contains(text(), '54')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:14:36.933121" elapsed="0.021048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:37.955119" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:36.954447" elapsed="1.000858"/>
+</kw>
+<arg>54</arg>
+<status status="PASS" start="2025-05-07T11:14:36.932487" elapsed="1.022996"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:37.977616" level="INFO">Current page contains element '//*[contains(text(), 'New Patient Created and should match')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:14:37.956139" elapsed="0.021627"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:38.978604" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:37.977987" elapsed="1.000912"/>
+</kw>
+<arg>New Patient Created and should match</arg>
+<status status="PASS" start="2025-05-07T11:14:37.955735" elapsed="1.023421"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:41.980262" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:38.979525" elapsed="3.000927"/>
+</kw>
+<arg>John Doe</arg>
+<status status="PASS" start="2025-05-07T11:14:22.526057" elapsed="19.454543"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:14:41.981229" elapsed="0.138680"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:12.675823" elapsed="29.444356"/>
+</test>
+<test id="s1-t3" name="Create appointment and check patient record" line="25">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:42.121999" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:42.121678" elapsed="1.273604"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:43.409745" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:14:43.395573" elapsed="0.014351"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:44.410856" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:43.410181" elapsed="1.000888"/>
+</kw>
+<kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:44.412445" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:44.412018" elapsed="0.272209"/>
+</kw>
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="PASS" start="2025-05-07T11:14:44.411459" elapsed="0.272966"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:45.685044" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:44.684636" elapsed="1.000588"/>
+</kw>
+<kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:45.686300" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:45.686034" elapsed="0.107706"/>
+</kw>
+<arg>odoo15</arg>
+<status status="PASS" start="2025-05-07T11:14:45.685571" elapsed="0.108341"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:46.794494" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:45.794058" elapsed="1.000629"/>
+</kw>
+<kw name="Submit my credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:46.798695" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:46.795435" elapsed="0.126710"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:46.795013" elapsed="0.127270"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:49.922828" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:46.922448" elapsed="3.000550"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:42.121337" elapsed="7.801822"/>
+</kw>
+<kw name="I want to create doctor">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:49.924158" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=407'</msg>
+<arg>${DOCTOR URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:49.924003" elapsed="0.012599"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:51.937493" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:49.936898" elapsed="2.000776"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:51.938212" level="INFO">Clicking element '//*[contains(text(), 'Create')]'.</msg>
+<arg>//*[contains(text(), 'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:51.937942" elapsed="0.116023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:53.054846" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:52.054268" elapsed="1.001044"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:53.055963" level="INFO">Typing text 'Main Doctor' into text field '//*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input'.</msg>
+<arg>//*[contains(text(), 'Name')]/parent::td/parent::tr/td[2]/input</arg>
+<arg>${doctor_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:53.055595" elapsed="0.129943"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:54.186266" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:53.185829" elapsed="1.000702"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:54.187409" level="INFO">Typing text '32' into text field '//*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input'.</msg>
+<arg>//*[contains(text(), 'Age')]/parent::td/parent::tr/td[2]/input</arg>
+<arg>32</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:54.186846" elapsed="0.190475"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:55.378408" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:54.377617" elapsed="1.001104"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:55.380205" level="INFO">Typing text 'The only doctor here' into text field '//*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea'.</msg>
+<arg>//*[contains(text(), 'Description')]/parent::td/parent::tr/td[2]/textarea</arg>
+<arg>The only doctor here</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:55.379638" elapsed="0.214299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:56.594962" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:55.594243" elapsed="1.000929"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:56.595883" level="INFO">Clicking element '//*[contains(text(), 'Save')]'.</msg>
+<arg>//*[contains(text(), 'Save')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:14:56.595474" elapsed="0.129724"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:57.726169" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:56.725422" elapsed="1.001054"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:57.727586" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:57.726888" elapsed="0.023363"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:14:59.751210" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:57.750629" elapsed="2.001079"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:14:59.752635" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=407'</msg>
+<arg>${DOCTOR URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:14:59.752162" elapsed="0.033521"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:01.786632" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:14:59.786006" elapsed="2.000805"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:01.787467" level="INFO">Clicking element '//*[contains(text(), 'Main Doctor')]'.</msg>
+<arg>//*[contains(text(), '${doctor_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:01.787060" elapsed="0.123915"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:02.911927" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:01.911278" elapsed="1.001063"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:02.936546" level="INFO">Current page contains element '//*[contains(text(), 'Main Doctor')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:02.913879" elapsed="0.022856"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:03.937574" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:02.937024" elapsed="1.000708"/>
+</kw>
+<arg>${doctor_name}</arg>
+<status status="PASS" start="2025-05-07T11:15:02.912979" elapsed="1.024873"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:03.955089" level="INFO">Current page contains element '//*[contains(text(), 'Male')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:03.938377" elapsed="0.016871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:04.955984" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:03.955482" elapsed="1.000727"/>
+</kw>
+<arg>Male</arg>
+<status status="PASS" start="2025-05-07T11:15:03.938058" elapsed="1.018342"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:04.975006" level="INFO">Current page contains element '//*[contains(text(), '32')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:04.957203" elapsed="0.017978"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:05.976273" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:04.975417" elapsed="1.001370"/>
+</kw>
+<arg>32</arg>
+<status status="PASS" start="2025-05-07T11:15:04.956692" elapsed="1.020593"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:06.003101" level="INFO">Current page contains element '//*[contains(text(), 'The only doctor here')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:05.979212" elapsed="0.024041"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:07.004022" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:06.003490" elapsed="1.000795"/>
+</kw>
+<arg>The only doctor here</arg>
+<status status="PASS" start="2025-05-07T11:15:05.978116" elapsed="1.026382"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:10.005355" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:07.004773" elapsed="3.000836"/>
+</kw>
+<arg>Main Doctor</arg>
+<status status="PASS" start="2025-05-07T11:14:49.923632" elapsed="20.082265"/>
+</kw>
+<kw name="I want to create appointment">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:10.008297" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:15:10.007991" elapsed="0.015210"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:12.024405" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:10.023661" elapsed="2.001045"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:12.025599" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${patient_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:12.025092" elapsed="0.145800"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:13.171722" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:12.171186" elapsed="1.000685"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:13.172406" level="INFO">Clicking element '//*[contains(text(), 'Appointments') and @class='o_stat_text']'.</msg>
+<arg>//*[contains(text(), 'Appointments') and @class='o_stat_text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:13.172076" elapsed="0.133243"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:15.306621" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:13.305609" elapsed="2.001336"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:15.308177" level="INFO">Clicking element '//*[contains(text(), 'Create')]'.</msg>
+<arg>//*[contains(text(), 'Create')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:15.307593" elapsed="0.129699"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:16.438249" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:15.437619" elapsed="1.000986"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:16.439545" level="INFO">Typing text '05/14/2025' into text field '//*[contains(text(), 'Date')]/parent::td/parent::tr/td[2]/div/input'.</msg>
+<arg>//*[contains(text(), 'Date')]/parent::td/parent::tr/td[2]/div/input</arg>
+<arg>05/14/2025</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:16.439051" elapsed="0.165385"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:17.605203" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:16.604719" elapsed="1.000755"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:17.606147" level="INFO">Typing text 'Main Doctor' into text field '//*[contains(text(), 'Doctor')]/parent::td/parent::tr/td[2]/div/div[1]/div/input'.</msg>
+<arg>//*[contains(text(), 'Doctor')]/parent::td/parent::tr/td[2]/div/div[1]/div/input</arg>
+<arg>${doctor_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:17.605807" elapsed="0.154442"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:18.760995" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:17.760526" elapsed="1.000677"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:18.761813" level="INFO">Typing text '05/14/2025' into text field '//*[contains(text(), 'Check Up Time')]/parent::td/parent::tr/td[2]/div/input'.</msg>
+<arg>//*[contains(text(), 'Check Up Time')]/parent::td/parent::tr/td[2]/div/input</arg>
+<arg>05/14/2025</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:18.761498" elapsed="0.162154"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:19.924804" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:18.923945" elapsed="1.001167"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:19.926069" level="INFO">Typing text 'Prescription details here...' into text field '//*[contains(text(), 'Prescription') and @class='o_form_label']/parent::td/parent::tr/td[2]/textarea'.</msg>
+<arg>//*[contains(text(), 'Prescription') and @class='o_form_label']/parent::td/parent::tr/td[2]/textarea</arg>
+<arg>Prescription details here...</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:19.925530" elapsed="0.233562"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:21.169732" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:20.159346" elapsed="1.010536"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:21.170306" level="INFO">Clicking element '//*[contains(text(), 'Medicine')]'.</msg>
+<arg>//*[contains(text(), 'Medicine')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:21.170092" elapsed="0.122643"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:22.294072" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:21.293037" elapsed="1.001421"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:22.295901" level="INFO">Clicking element '//*[contains(text(), 'Add a line')]'.</msg>
+<arg>//*[contains(text(), 'Add a line')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:22.295036" elapsed="0.162765"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:23.458938" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:22.458084" elapsed="1.001158"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:23.460210" level="INFO">Typing text 'Medicine for this appointment...' into text field '//*[@class='o_field_char o_field_widget o_quick_editable o_input o_required_modifier' and @name='name']'.</msg>
+<arg>//*[@class='o_field_char o_field_widget o_quick_editable o_input o_required_modifier' and @name='name']</arg>
+<arg>Medicine for this appointment...</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:23.459693" elapsed="0.185845"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:24.646374" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:23.645810" elapsed="1.000773"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:24.647271" level="INFO">Clicking element '//*[contains(text(), 'Confirm')]'.</msg>
+<arg>//*[contains(text(), 'Confirm')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:24.646890" elapsed="0.175899"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:25.823727" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:24.823092" elapsed="1.000830"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:25.824515" level="INFO">Clicking element '//*[contains(text(), 'Ok')]'.</msg>
+<arg>//*[contains(text(), 'Ok')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:25.824212" elapsed="0.135157"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:26.960229" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:25.959683" elapsed="1.000730"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:26.960977" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=407'</msg>
+<arg>${DOCTOR URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:15:26.960672" elapsed="0.014751"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:28.976543" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:26.975704" elapsed="2.001018"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:28.977238" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:15:28.976978" elapsed="0.016171"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:30.994073" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:28.993447" elapsed="2.000843"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:30.995523" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${patient_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:30.994608" elapsed="0.092051"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:32.087430" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:31.086918" elapsed="1.000703"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:32.088230" level="INFO">Clicking element '//*[contains(text(), '05/14/2025')]'.</msg>
+<arg>//*[contains(text(), '05/14/2025')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:32.087900" elapsed="0.158592"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:33.247393" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:32.246811" elapsed="1.000845"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:33.274571" level="INFO">Current page contains element '//*[contains(text(), '54')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:33.248876" elapsed="0.025825"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:34.275725" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:33.274922" elapsed="1.001131"/>
+</kw>
+<arg>54</arg>
+<status status="PASS" start="2025-05-07T11:15:33.248115" elapsed="1.028217"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:34.295704" level="INFO">Current page contains element '//*[contains(text(), 'Main Doctor')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:34.277826" elapsed="0.018018"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:35.296615" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:34.296060" elapsed="1.001053"/>
+</kw>
+<arg>${doctor_name}</arg>
+<status status="PASS" start="2025-05-07T11:15:34.276774" elapsed="1.020736"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:35.316589" level="INFO">Current page contains element '//*[contains(text(), 'Male')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:35.298434" elapsed="0.018340"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:36.317605" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:35.317004" elapsed="1.000850"/>
+</kw>
+<arg>Male</arg>
+<status status="PASS" start="2025-05-07T11:15:35.297893" elapsed="1.020213"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:36.336796" level="INFO">Current page contains element '//*[contains(text(), '05/14/2025')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:36.318884" elapsed="0.018045"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:37.338727" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:36.337132" elapsed="1.002132"/>
+</kw>
+<arg>05/14/2025</arg>
+<status status="PASS" start="2025-05-07T11:15:36.318444" elapsed="1.021087"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:37.357917" level="INFO">Current page contains element '//*[contains(text(), 'Confirmed')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:37.340244" elapsed="0.017807"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:38.358725" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:37.358249" elapsed="1.000713"/>
+</kw>
+<arg>Confirmed</arg>
+<status status="PASS" start="2025-05-07T11:15:37.339812" elapsed="1.019365"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:38.383687" level="INFO">Current page contains element '//*[contains(text(), 'Prescription details here...')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:38.360571" elapsed="0.023247"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:39.384617" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:38.384012" elapsed="1.000837"/>
+</kw>
+<arg>Prescription details here...</arg>
+<status status="PASS" start="2025-05-07T11:15:38.359736" elapsed="1.025333"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:39.385724" level="INFO">Clicking element '//*[contains(text(), 'Medicine')]'.</msg>
+<arg>//*[contains(text(), 'Medicine')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:39.385361" elapsed="0.125742"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:40.512523" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:39.511345" elapsed="1.001596"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:40.547501" level="INFO">Current page contains element '//*[contains(text(), 'Medicine for this appointment...')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:40.513751" elapsed="0.033924"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:41.548423" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:40.547888" elapsed="1.000792"/>
+</kw>
+<arg>Medicine for this appointment...</arg>
+<status status="PASS" start="2025-05-07T11:15:40.513270" elapsed="1.035657"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:41.549846" level="INFO">Clicking element '//*[contains(text(), 'Other Info')]'.</msg>
+<arg>//*[contains(text(), 'Other Info')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:41.549366" elapsed="0.155106"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:42.705244" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:41.704783" elapsed="1.000615"/>
+</kw>
+<kw name="Text Should Match">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:42.731551" level="INFO">Current page contains element '//*[contains(text(), 'New Patient Created and should match')]'.</msg>
+<arg>//*[contains(text(), '${match_text}')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:15:42.705998" elapsed="0.025862"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:43.733449" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:42.732479" elapsed="1.001342"/>
+</kw>
+<arg>New Patient Created and should match</arg>
+<status status="PASS" start="2025-05-07T11:15:42.705649" elapsed="1.028493"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:46.735433" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:43.734459" elapsed="3.001181"/>
+</kw>
+<arg>John Doe</arg>
+<arg>Main Doctor</arg>
+<status status="PASS" start="2025-05-07T11:15:10.007190" elapsed="36.728628"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:15:46.736413" elapsed="0.155887"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:14:42.120811" elapsed="64.771836"/>
+</test>
+<test id="s1-t4" name="Remove patient and catch error" line="31">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:46.895091" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:15:46.894650" elapsed="1.296636"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:48.211979" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:15:48.191861" elapsed="0.020355"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:49.213295" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:48.212590" elapsed="1.000935"/>
+</kw>
+<kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:49.214765" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:49.214382" elapsed="0.228621"/>
+</kw>
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="PASS" start="2025-05-07T11:15:49.213888" elapsed="0.229320"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:50.443866" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:49.443425" elapsed="1.000661"/>
+</kw>
+<kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:50.445445" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:50.445052" elapsed="0.122655"/>
+</kw>
+<arg>odoo15</arg>
+<status status="PASS" start="2025-05-07T11:15:50.444468" elapsed="0.123448"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:51.568707" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:50.568126" elapsed="1.000755"/>
+</kw>
+<kw name="Submit my credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:51.569868" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:51.569628" elapsed="0.147127"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:15:51.569189" elapsed="0.147778"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:54.718173" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:51.717177" elapsed="3.001232"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:15:46.894072" elapsed="7.824505"/>
+</kw>
+<kw name="I want to open om_hospital page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:54.720103" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:15:54.719749" elapsed="0.016802"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:55.737566" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:54.736939" elapsed="1.000765"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:55.744390" level="INFO">Page title is 'Odoo - Patients'.</msg>
+<arg>Odoo - Patients</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:15:55.737930" elapsed="0.006571"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:56.745100" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:55.744671" elapsed="1.000624"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:15:54.719144" elapsed="2.026324"/>
+</kw>
+<kw name="I want to remove patient">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:56.746912" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:56.746502" elapsed="0.149594"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:57.897848" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:56.896838" elapsed="1.001188"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:57.898549" level="INFO">Clicking element '//*[contains(text(), 'Action')]'.</msg>
+<arg>//*[contains(text(), 'Action')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:57.898287" elapsed="0.128325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:15:59.027504" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:58.026833" elapsed="1.000921"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:59.028573" level="INFO">Simulating Mouse Over on element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:59.028120" elapsed="0.295370"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:15:59.324078" level="INFO">Clicking element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:15:59.323768" elapsed="0.111445"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:00.436047" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:15:59.435566" elapsed="1.000677"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:00.436817" level="INFO">Clicking element '//*[contains(text(), 'Ok')]'.</msg>
+<arg>//*[contains(text(), 'Ok')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:00.436525" elapsed="0.101647"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:03.539172" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:00.538545" elapsed="3.000797"/>
+</kw>
+<arg>John Doe</arg>
+<status status="PASS" start="2025-05-07T11:15:56.745983" elapsed="6.793522"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:03.568310" level="INFO">Current page contains element '//*[contains(text(), 'Validation Error')]'.</msg>
+<arg>//*[contains(text(), 'Validation Error')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:16:03.539880" elapsed="0.028665"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:16:03.569301" elapsed="0.073965"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:15:46.893224" elapsed="16.750260"/>
+</test>
+<test id="s1-t5" name="Remove doctors and check availability" line="38">
+<kw name="I want to login into odoo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:03.645020" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8069/web/login/'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:16:03.644748" elapsed="1.189807"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:04.861608" level="INFO">Page title is 'Login | My Website'.</msg>
+<arg>Login | My Website</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:16:04.834811" elapsed="0.027098"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:05.863053" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:04.862291" elapsed="1.000964"/>
+</kw>
+<kw name="Input my username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:05.864465" level="INFO">Typing text 'louisoporto042@csu.fullerton.edu' into text field 'login'.</msg>
+<arg>login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:05.864121" elapsed="0.263843"/>
+</kw>
+<arg>louisoporto042@csu.fullerton.edu</arg>
+<status status="PASS" start="2025-05-07T11:16:05.863613" elapsed="0.264487"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:07.128600" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:06.128248" elapsed="1.000536"/>
+</kw>
+<kw name="Input my password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:07.129808" level="INFO">Typing text 'odoo15' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:07.129500" elapsed="0.115035"/>
+</kw>
+<arg>odoo15</arg>
+<status status="PASS" start="2025-05-07T11:16:07.129079" elapsed="0.115607"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:08.245392" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:07.244832" elapsed="1.001027"/>
+</kw>
+<kw name="Submit my credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:08.247862" level="INFO">Clicking element '//*[contains(text(),'Log in')]'.</msg>
+<arg>//*[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:08.247316" elapsed="0.133383"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:16:08.246452" elapsed="0.134398"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:11.381372" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:08.380995" elapsed="3.000519"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:16:03.644362" elapsed="7.737269"/>
+</kw>
+<kw name="I want to open om_hospital page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:11.382551" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:16:11.382379" elapsed="0.011678"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:12.394981" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:11.394318" elapsed="1.000963"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:12.407061" level="INFO">Page title is 'Odoo - Patients'.</msg>
+<arg>Odoo - Patients</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-05-07T11:16:12.395851" elapsed="0.011355"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:13.407973" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:12.407487" elapsed="1.000667"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:16:11.381971" elapsed="2.026339"/>
+</kw>
+<kw name="I want to remove appointment">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:13.409558" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${patient_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:13.409264" elapsed="0.121185"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:14.531277" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:13.530793" elapsed="1.000663"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:14.532415" level="INFO">Clicking element '//*[contains(text(), 'Appointments') and @class='o_stat_text']'.</msg>
+<arg>//*[contains(text(), 'Appointments') and @class='o_stat_text']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:14.532088" elapsed="0.156859"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:16.690136" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:14.689370" elapsed="2.001029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:16.690969" level="INFO">Clicking element '//*[contains(text(), '05/14/2025')]'.</msg>
+<arg>//*[contains(text(), '05/14/2025')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:16.690683" elapsed="0.136269"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:17.827802" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:16.827241" elapsed="1.000770"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:17.828618" level="INFO">Clicking element '//*[contains(text(), 'Action')]'.</msg>
+<arg>//*[contains(text(), 'Action')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:17.828304" elapsed="0.136700"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:18.966062" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:17.965334" elapsed="1.000984"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:18.967235" level="INFO">Simulating Mouse Over on element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:18.966701" elapsed="0.297634"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:19.264823" level="INFO">Clicking element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:19.264590" elapsed="0.137180"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:20.402762" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:19.402009" elapsed="1.001013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:20.404413" level="INFO">Clicking element '//*[contains(text(), 'Ok')]'.</msg>
+<arg>//*[contains(text(), 'Ok')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:20.403432" elapsed="0.130220"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:23.534747" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:20.533987" elapsed="3.001104"/>
+</kw>
+<arg>John Doe</arg>
+<status status="PASS" start="2025-05-07T11:16:13.408809" elapsed="10.126600"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:23.536721" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=407'</msg>
+<arg>${DOCTOR URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:16:23.536173" elapsed="0.019351"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:25.557436" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:23.556321" elapsed="2.001327"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:25.582183" level="INFO">Current page contains element '//*[contains(text(), 'Main Doctor')]'.</msg>
+<arg>//*[contains(text(), 'Main Doctor')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:16:25.558146" elapsed="0.024158"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:26.583129" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:25.582644" elapsed="1.000742"/>
+</kw>
+<kw name="I want to remove doctor">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:26.585817" level="INFO">Clicking element '//*[contains(text(), 'Main Doctor')]'.</msg>
+<arg>//*[contains(text(), '${doctor_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:26.585388" elapsed="0.128115"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:27.714366" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:26.713801" elapsed="1.000894"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:27.715546" level="INFO">Clicking element '//*[contains(text(), 'Action')]'.</msg>
+<arg>//*[contains(text(), 'Action')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:27.715090" elapsed="0.119444"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:28.835728" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:27.834836" elapsed="1.001198"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:28.837044" level="INFO">Simulating Mouse Over on element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:28.836483" elapsed="0.293728"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:29.131065" level="INFO">Clicking element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:29.130530" elapsed="0.109462"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:30.241104" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:29.240314" elapsed="1.001026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:30.242078" level="INFO">Clicking element '//*[contains(text(), 'Ok')]'.</msg>
+<arg>//*[contains(text(), 'Ok')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:30.241679" elapsed="0.117614"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:33.360167" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:30.359580" elapsed="3.000803"/>
+</kw>
+<arg>Main Doctor</arg>
+<status status="PASS" start="2025-05-07T11:16:26.584219" elapsed="6.776587"/>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<kw name="//*[contains(text(), 'Main Doctor')]">
+<msg time="2025-05-07T11:16:33.364235" level="FAIL">No keyword with name '//*[contains(text(), 'Main Doctor')]' found.</msg>
+<status status="FAIL" start="2025-05-07T11:16:33.364107" elapsed="0.000230">No keyword with name '//*[contains(text(), 'Main Doctor')]' found.</status>
+</kw>
+<arg>*</arg>
+<arg>//*[contains(text(), 'Main Doctor')]</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="PASS" start="2025-05-07T11:16:33.361224" elapsed="0.003406"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:33.365196" level="INFO">Opening url 'http://localhost:8069/web#cids=1&amp;action=405'</msg>
+<arg>${HOSPITAL URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-07T11:16:33.364990" elapsed="0.013459"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:35.379469" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:33.378904" elapsed="2.000760"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:35.397450" level="INFO">Current page contains element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), 'John Doe')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-07T11:16:35.380161" elapsed="0.017470"/>
+</kw>
+<kw name="I want to remove patient">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:35.399085" level="INFO">Clicking element '//*[contains(text(), 'John Doe')]'.</msg>
+<arg>//*[contains(text(), '${name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:35.398735" elapsed="0.129605"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:36.529471" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:35.528631" elapsed="1.001103"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:36.530668" level="INFO">Clicking element '//*[contains(text(), 'Action')]'.</msg>
+<arg>//*[contains(text(), 'Action')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:36.530270" elapsed="0.114542"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:37.645666" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:36.645091" elapsed="1.000762"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:37.646394" level="INFO">Simulating Mouse Over on element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:37.646119" elapsed="0.287319"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:37.933896" level="INFO">Clicking element '//*[contains(text(), 'Delete')]'.</msg>
+<arg>//*[contains(text(), 'Delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:37.933671" elapsed="0.137461"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:39.071734" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:38.071338" elapsed="1.000612"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-07T11:16:39.072579" level="INFO">Clicking element '//*[contains(text(), 'Ok')]'.</msg>
+<arg>//*[contains(text(), 'Ok')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-07T11:16:39.072247" elapsed="0.104822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-07T11:16:42.178057" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-07T11:16:39.177489" elapsed="3.000742"/>
+</kw>
+<arg>John Doe</arg>
+<status status="PASS" start="2025-05-07T11:16:35.398183" elapsed="6.780182"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-07T11:16:42.178771" elapsed="0.089971"/>
+</kw>
+<status status="PASS" start="2025-05-07T11:16:03.643889" elapsed="38.625232"/>
+</test>
+<doc>om_hospital testing using SeleniumLibrary.</doc>
+<status status="PASS" start="2025-05-07T11:14:03.451409" elapsed="158.819502"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="odooTesting" id="s1" pass="5" fail="0" skip="0">odooTesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
