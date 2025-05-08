@@ -4,15 +4,27 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}      http://localhost:8069/web/login/
+<<<<<<< HEAD
 ${HOSPITAL URL}   http://localhost:8069/web#cids=1&action=381
 ${DOCTOR URL}     http://localhost:8069/web#cids=1&action=383
 ${APPOINTMENT URL}  http://localhost:8069/web#cids=&action=385
 ${BROWSER}        ff
+=======
+${HOSPITAL URL}   http://localhost:8069/web#cids=1&action=405
+${DOCTOR URL}     http://localhost:8069/web#cids=1&action=407
+${APPOINTMENT URL}  http://localhost:8069/web#cids=&action=409
+${BROWSER}        Chrome
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80
 
 *** Test Cases ***
 My login test case
     I want to login into odoo
+<<<<<<< HEAD
     I should see this page   
+=======
+    I should see this page  
+    Sleep  1s   
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80
     [Teardown]  Close Browser
 
 Create patient and check inforamtion
@@ -34,6 +46,7 @@ Remove patient and catch error
     Page Should Contain Element  //*[contains(text(), 'Validation Error')]
     [Teardown]  Close Browser
 
+<<<<<<< HEAD
 Remove appointment, patient, and doctor then check if pages are empty
     I want to login into odoo
     I want to remove appointment  John Doe
@@ -44,6 +57,17 @@ Remove appointment, patient, and doctor then check if pages are empty
     Sleep  1s
     I want to remove doctor  Main Doctor
     Check everything is empty
+=======
+Remove doctors and check availability
+    I want to login into odoo
+    I want to remove appointment  John Doe
+    Go To  ${DOCTOR URL}
+    Sleep  2s
+    Page Should Contain  //*[contains(text(), 'Main Doctor')]
+    Sleep  1s
+    I want to remove doctor  Main Doctor
+    Run Keyword And Expect Error  *  //*[contains(text(), 'Main Doctor')]
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80
     [Teardown]    Close Browser
 
 *** Keywords ***
@@ -115,7 +139,10 @@ I want to create patient
 
 I want to remove patient
     [Arguments]  ${name}
+<<<<<<< HEAD
     Go To  ${HOSPITAL URL}
+=======
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80
     Click Element  //*[contains(text(), '${name}')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Action')]
@@ -154,11 +181,21 @@ I want to create doctor
 
 I want to remove doctor
     [Arguments]  ${doctor_name}
+<<<<<<< HEAD
     Go To  ${DOCTOR URL}
     Sleep  2s
     Click Element  //*[contains(text(), '${doctor_name}')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Action')]
+=======
+    Go To  ${HOSPITAL URL}
+    Sleep  2s
+    Click Element  //*[contains(text(), '${doctor_name})]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Action')]
+    Sleep  1s
+    Mouse Over  //*[contains(text(), 'Delete')]
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80
     Click Element  //*[contains(text(), 'Delete')]
     Sleep  1s
     Click Element  //*[contains(text(), 'Ok')]
@@ -216,6 +253,7 @@ I want to create appointment
 
 I want to remove appointment
     [Arguments]  ${patient_name}
+<<<<<<< HEAD
     Go To  ${APPOINTMENT URL}
     Sleep  1s
     Click Element  //i[contains(@class, 'fa-remove')]
@@ -242,3 +280,13 @@ Check everything is empty
     Sleep  0.5s
     Element Should Be Visible  //p[contains(@class, 'o_view_nocontent_smiling_face')]
     Sleep  1s
+=======
+    Go To  ${HOSPITAL URL}
+    Click Element  //*[contains(text(), '${patient_name}')]
+    Sleep  1s
+    Click Element  //*[contains(text(), 'Appointments')]
+    Sleep  2s
+    Clicke Element  //*[contains(text(), '05/14/2025')]
+    Sleep  1s
+    Click Element  //*
+>>>>>>> b8a6b6c98f1c98ea73c39362e4ced50eef301b80

@@ -15,10 +15,10 @@ Run ```./odoo-bin --test-tags /om_hospital```
 # Selenium Testing
 ## Current Test Cases
 - My login test case
-- Positive test case of om_hospital
-- Negative tes case of om_hospital
-- test case 4
-- test case 5
+- Create patient and check information
+- Remove patient record and check if they exist
+- Remove doctors and check availability
+- Create appointment and check patient record
 
 ## Requirements
 Selenium testing via robot framework
